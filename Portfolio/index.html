@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shahzaib Haider — Data Scientist</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">SH</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <span class="loader-text">Initializing...</span>
+    </div>
+  </div>
+
+  <!-- ===== SCROLL PROGRESS ===== -->
+  <div id="scroll-progress"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">SH<span class="logo-dot">.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#journey" class="nav-link">Journey</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-ribbon hero-ribbon-tr" aria-hidden="true"></div>
+    <div class="hero-ribbon hero-ribbon-bl" aria-hidden="true"></div>
+
+    <div class="hero-split">
+      <div class="hero-glass-wrap reveal-up">
+        <div class="hero-glass-panel glass-panel-hero">
+          <p class="hero-eyebrow">Data scientist + lab</p>
+          <h1 class="hero-headline">
+            <span class="hero-headline-line">Shahzaib</span>
+            <span class="hero-headline-line">Haider</span>
+          </h1>
+          <p class="hero-kicker">
+            Bachelor's in Computer Science — COMSATS University Islamabad · AI, ML &amp; full-stack projects
+          </p>
+          <div class="hero-title-row">
+            <span class="hero-role">Data Scientist</span>
+            <span class="hero-divider">|</span>
+            <span class="typed-wrapper">
+              <span id="typed-text"></span><span class="typed-cursor">_</span>
+            </span>
+          </div>
+          <div class="hero-cta-row">
+            <a href="#projects" class="btn-hero-solid">View projects</a>
+            <a href="https://github.com/shahzaib1384" target="_blank" rel="noopener noreferrer" class="btn-hero-outline">
+              <i class="ri-github-line"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/shahzaibhaider2751/" target="_blank" rel="noopener noreferrer" class="btn-hero-outline">
+              <i class="ri-linkedin-line"></i> LinkedIn
+            </a>
+          </div>
+          <div class="hero-stats hero-stats-inline">
+            <div class="stat">
+              <span class="stat-num" data-target="5">0</span>+
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num" data-target="2026">0</span>
+              <span class="stat-label">Graduating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-label reveal-up">About Me</div>
+      <h2 class="section-title reveal-up">Crafting Intelligence<br /><span class="gradient-text">From Raw Data</span></h2>
+
+      <div class="about-grid">
+        <div class="about-left reveal-left">
+          <div class="about-image-wrap">
+            <div class="about-avatar">
+              <div class="avatar-letters">SH</div>
+              <div class="avatar-ring ring-1"></div>
+              <div class="avatar-ring ring-2"></div>
+              <div class="avatar-glow"></div>
+            </div>
+            <div class="about-tag tag-1 glass-card">
+              <i class="ri-brain-line"></i> AI Researcher
+            </div>
+            <div class="about-tag tag-2 glass-card">
+              <i class="ri-code-s-slash-line"></i> Full Stack
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right reveal-right">
+          <p class="about-intro">
+            I'm Shahzaib Haider, a Data Scientist and Computer Science undergraduate at COMSATS University Islamabad
+            (expected graduation June 2026), based in Taxila, Pakistan.
+          </p>
+          <p class="about-body">
+            My work spans <strong>machine learning</strong>, <strong>NLP</strong>, <strong>computer vision</strong>,
+            and <strong>full-stack engineering</strong> — from FYP SafeSocial (privacy-aware NLP and scraping) to
+            ViT/CNN food recognition with Flutter and FastAPI, LSTM forecasting, and Java and C++ systems projects.
+            I focus on turning messy data into reliable models and usable products.
+          </p>
+
+          <div class="about-cards">
+            <div class="about-card glass-card tilt-card">
+              <i class="ri-brain-line card-icon"></i>
+              <h4>AI & ML</h4>
+              <p>Deep learning, NLP, computer vision — building models that perceive and reason.</p>
+            </div>
+            <div class="about-card glass-card tilt-card">
+              <i class="ri-code-s-slash-line card-icon"></i>
+              <h4>Engineering</h4>
+              <p>FastAPI, React, MongoDB — end-to-end system design from data pipeline to UI.</p>
+            </div>
+            <div class="about-card glass-card tilt-card">
+              <i class="ri-bar-chart-2-line card-icon"></i>
+              <h4>Data Science</h4>
+              <p>LSTM forecasting, Power BI dashboards, statistical analysis and insight generation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-label reveal-up">Technical Stack</div>
+      <h2 class="section-title reveal-up">Skills &amp; <span class="gradient-text">Expertise</span></h2>
+      <p class="section-sub reveal-up">A curated stack refined through real project experience</p>
+
+      <div class="skills-grid skills-grid-resume">
+
+        <div class="skill-category glass-card reveal-up tilt-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="ri-code-s-slash-line"></i></div>
+            <h3>Core (resume)</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span>Python</span><span class="skill-pct">—</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>C++</span><span class="skill-pct">—</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>OOP</span><span class="skill-pct">—</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>SQL</span><span class="skill-pct">—</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+          </div>
+          <div class="skill-badges">
+            <span class="badge">Python</span>
+            <span class="badge">C++</span>
+            <span class="badge">OOP</span>
+            <span class="badge">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card reveal-up tilt-card" style="--delay: 0.1s">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="ri-global-line"></i></div>
+            <h3>Data &amp; interfaces</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span>React</span><span class="skill-pct">—</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="76"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Power BI</span><span class="skill-pct">—</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Pandas / Scikit-learn</span><span class="skill-pct">—</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="86"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Deep learning stack</span><span class="skill-pct">—</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="84"></div></div>
+            </div>
+          </div>
+          <div class="skill-badges">
+            <span class="badge">React</span>
+            <span class="badge">Power BI</span>
+            <span class="badge">LSTM</span>
+            <span class="badge">CNN / ViT</span>
+            <span class="badge">NLP</span>
+            <span class="badge">FastAPI</span>
+            <span class="badge">MongoDB</span>
+            <span class="badge">Flutter</span>
+            <span class="badge">Java</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-label reveal-up">Portfolio</div>
+      <h2 class="section-title reveal-up">Featured <span class="gradient-text">Projects</span></h2>
+      <p class="section-sub reveal-up">Real-world problems solved with intelligent engineering</p>
+
+      <!-- Filter buttons -->
+      <div class="filter-bar reveal-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI / ML</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="systems">Systems</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card glass-card reveal-up" data-cat="ai web">
+          <div class="project-card-glow"></div>
+          <div class="project-num">01</div>
+          <div class="project-header">
+            <div class="project-icon-wrap"><i class="ri-shield-keyhole-line"></i></div>
+            <div class="project-tags">
+              <span class="tag-badge tag-ai">AI</span>
+              <span class="tag-badge tag-web">Web</span>
+            </div>
+          </div>
+          <h3 class="project-title">SafeSocial</h3>
+          <p class="project-desc">
+            Full-stack web app to detect sensitive data exposure in user comments across social platforms using NLP, regex, and web scraping. Python, React, and MongoDB with APIs for real-time analysis and privacy monitoring. <span class="project-dates">Oct 2025 – Apr 2026</span>
+          </p>
+          <div class="project-tech">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">NLP</span>
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">MongoDB</span>
+            <span class="tech-pill">Web Scraping</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/shahzaib1384/SafeSocial" target="_blank" rel="noopener noreferrer" class="btn-sm btn-ghost"><i class="ri-github-line"></i> GitHub</a>
+            <a href="#contact" class="btn-sm btn-glow"><i class="ri-mail-line"></i> Contact</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-card reveal-up" data-cat="ai" style="--delay: 0.1s">
+          <div class="project-card-glow"></div>
+          <div class="project-num">02</div>
+          <div class="project-header">
+            <div class="project-icon-wrap"><i class="ri-restaurant-line"></i></div>
+            <div class="project-tags">
+              <span class="tag-badge tag-ai">AI</span>
+            </div>
+          </div>
+          <h3 class="project-title">Food Recognition &amp; Calorie Estimator</h3>
+          <p class="project-desc">
+            AI-powered app using ViT and CNN to classify food and estimate calories. Flutter client with FastAPI backend, diet recommendations and real-time scanning. <span class="project-dates">Oct 2025 – Dec 2025</span>
+          </p>
+          <div class="project-tech">
+            <span class="tech-pill">ViT</span>
+            <span class="tech-pill">CNN</span>
+            <span class="tech-pill">FastAPI</span>
+            <span class="tech-pill">Flutter</span>
+            <span class="tech-pill">Python</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/TAHA283/FoodRecognition" target="_blank" rel="noopener noreferrer" class="btn-sm btn-ghost"><i class="ri-github-line"></i> GitHub</a>
+            <a href="#contact" class="btn-sm btn-glow"><i class="ri-mail-line"></i> Contact</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-card reveal-up" data-cat="ai" style="--delay: 0.2s">
+          <div class="project-card-glow"></div>
+          <div class="project-num">03</div>
+          <div class="project-header">
+            <div class="project-icon-wrap"><i class="ri-stock-line"></i></div>
+            <div class="project-tags">
+              <span class="tag-badge tag-ai">AI</span>
+            </div>
+          </div>
+          <h3 class="project-title">Stock Price Predictor</h3>
+          <p class="project-desc">
+            Stock forecasting with LSTM, Pandas, and Scikit-learn on historical trends; visualization and improved accuracy via preprocessing and tuning. <span class="project-dates">Mar 2025 – Apr 2025</span>
+          </p>
+          <div class="project-tech">
+            <span class="tech-pill">LSTM</span>
+            <span class="tech-pill">Pandas</span>
+            <span class="tech-pill">Scikit-learn</span>
+            <span class="tech-pill">Python</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/zaryab404/stock-price-tracker" target="_blank" rel="noopener noreferrer" class="btn-sm btn-ghost"><i class="ri-github-line"></i> GitHub</a>
+            <a href="#contact" class="btn-sm btn-glow"><i class="ri-mail-line"></i> Contact</a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass-card reveal-up" data-cat="systems" style="--delay: 0.1s">
+          <div class="project-card-glow"></div>
+          <div class="project-num">04</div>
+          <div class="project-header">
+            <div class="project-icon-wrap"><i class="ri-trophy-line"></i></div>
+            <div class="project-tags">
+              <span class="tag-badge tag-sys">Systems</span>
+            </div>
+          </div>
+          <h3 class="project-title">Sports Management System</h3>
+          <p class="project-desc">
+            Java OOP application to manage teams, players, and multiple sports tournaments — add, delete, and organize structured data. <span class="project-dates">Apr 2023 – Jun 2023</span>
+          </p>
+          <div class="project-tech">
+            <span class="tech-pill">Java</span>
+            <span class="tech-pill">OOP</span>
+            <span class="tech-pill">Data Structures</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/shahzaib1384/SportsManagementSystem" target="_blank" rel="noopener noreferrer" class="btn-sm btn-ghost"><i class="ri-github-line"></i> GitHub</a>
+            <a href="#contact" class="btn-sm btn-glow"><i class="ri-mail-line"></i> Contact</a>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card glass-card reveal-up" data-cat="systems" style="--delay: 0.2s">
+          <div class="project-card-glow"></div>
+          <div class="project-num">05</div>
+          <div class="project-header">
+            <div class="project-icon-wrap"><i class="ri-flight-takeoff-line"></i></div>
+            <div class="project-tags">
+              <span class="tag-badge tag-sys">Systems</span>
+            </div>
+          </div>
+          <h3 class="project-title">Flight Booking System</h3>
+          <p class="project-desc">
+            C++ app for searching flights, selecting seats, and managing bookings with seat allocation and reservation logic. <span class="project-dates">Apr 2023 – May 2023</span>
+          </p>
+          <div class="project-tech">
+            <span class="tech-pill">C++</span>
+            <span class="tech-pill">OOP</span>
+            <span class="tech-pill">File I/O</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/shahzaib1384/FlightBookingSystem" target="_blank" rel="noopener noreferrer" class="btn-sm btn-ghost"><i class="ri-github-line"></i> GitHub</a>
+            <a href="#contact" class="btn-sm btn-glow"><i class="ri-mail-line"></i> Contact</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== JOURNEY / EDUCATION SECTION ===== -->
+  <section id="journey" class="section section-alt">
+    <div class="container">
+      <div class="section-label reveal-up">Background</div>
+      <h2 class="section-title reveal-up">Education <span class="gradient-text">Journey</span></h2>
+      <p class="section-sub reveal-up">The academic foundation behind the engineering mindset</p>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-line"></div>
+          <div class="timeline-dot">
+            <i class="ri-graduation-cap-line"></i>
+          </div>
+          <div class="timeline-content glass-card tilt-card">
+            <div class="tl-year">Oct 2022 — Jun 2026</div>
+            <h3 class="tl-title">Bachelor's in Computer Science</h3>
+            <div class="tl-institution">
+              <i class="ri-building-line"></i>
+              COMSATS University Islamabad · Islamabad, Pakistan
+            </div>
+            <p class="tl-desc">
+              Undergraduate CS program with focus on AI/ML, data science, and software engineering. Coursework and projects cover machine learning, NLP, computer vision, algorithms, and full-stack development.
+            </p>
+            <div class="tl-tags">
+              <span class="tl-tag">AI / ML</span>
+              <span class="tl-tag">Data Science</span>
+              <span class="tl-tag">Software Engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-line"></div>
+          <div class="timeline-dot">
+            <i class="ri-book-open-line"></i>
+          </div>
+          <div class="timeline-content glass-card tilt-card">
+            <div class="tl-year">Apr 2020 — May 2022</div>
+            <h3 class="tl-title">FSc</h3>
+            <div class="tl-institution">
+              <i class="ri-building-line"></i>
+              Jinnah Education System · Taxila, Pakistan
+            </div>
+            <p class="tl-desc">
+              Pre-engineering track (Physics, Mathematics, Chemistry) building analytical foundations for CS and quantitative work.
+            </p>
+            <div class="tl-tags">
+              <span class="tl-tag">Mathematics</span>
+              <span class="tl-tag">Physics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-line"></div>
+          <div class="timeline-dot">
+            <i class="ri-school-line"></i>
+          </div>
+          <div class="timeline-content glass-card tilt-card">
+            <div class="tl-year">Apr 2018 — May 2020</div>
+            <h3 class="tl-title">Matric</h3>
+            <div class="tl-institution">
+              <i class="ri-building-line"></i>
+              Jinnah Education System · Taxila, Pakistan
+            </div>
+            <p class="tl-desc">
+              Secondary school sciences and mathematics; established study habits and core STEM grounding before college.
+            </p>
+            <div class="tl-tags">
+              <span class="tl-tag">Sciences</span>
+              <span class="tl-tag">Mathematics</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-label reveal-up">Get In Touch</div>
+      <h2 class="section-title reveal-up">Let's <span class="gradient-text">Connect</span></h2>
+      <p class="section-sub reveal-up">Open to collaborations, internships, and full-time opportunities</p>
+
+      <div class="contact-grid">
+
+        <div class="contact-info reveal-left">
+          <p class="contact-intro">
+            Whether you have a project in mind, want to discuss AI, or just want to say hello — my inbox is always open.
+          </p>
+
+          <div class="contact-items">
+            <a href="mailto:shahzaib1384@gmail.com" class="contact-item glass-card">
+              <div class="ci-icon"><i class="ri-mail-line"></i></div>
+              <div class="ci-content">
+                <span class="ci-label">Email</span>
+                <span class="ci-value">shahzaib1384@gmail.com</span>
+              </div>
+              <i class="ri-arrow-right-up-line ci-arrow"></i>
+            </a>
+            <a href="tel:+923175826478" class="contact-item glass-card">
+              <div class="ci-icon"><i class="ri-phone-line"></i></div>
+              <div class="ci-content">
+                <span class="ci-label">Phone</span>
+                <span class="ci-value">+92 317 5826478</span>
+              </div>
+              <i class="ri-arrow-right-up-line ci-arrow"></i>
+            </a>
+            <div class="contact-item glass-card">
+              <div class="ci-icon"><i class="ri-map-pin-line"></i></div>
+              <div class="ci-content">
+                <span class="ci-label">Location</span>
+                <span class="ci-value">Taxila, Pakistan</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://github.com/shahzaib1384" target="_blank" rel="noopener noreferrer" class="social-btn glass-card" aria-label="GitHub profile">
+              <i class="ri-github-line"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/shahzaibhaider2751/" target="_blank" rel="noopener noreferrer" class="social-btn glass-card" aria-label="LinkedIn profile">
+              <i class="ri-linkedin-line"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form glass-card" id="contact-form" novalidate>
+            <div class="form-title">Send a Message</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Your Name</label>
+                <input type="text" id="fname" placeholder="John Doe" required />
+                <div class="input-highlight"></div>
+              </div>
+              <div class="form-group">
+                <label for="femail">Your Email</label>
+                <input type="email" id="femail" placeholder="john@example.com" required />
+                <div class="input-highlight"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fsubject">Subject</label>
+              <input type="text" id="fsubject" placeholder="Project collaboration..." required />
+              <div class="input-highlight"></div>
+            </div>
+            <div class="form-group">
+              <label for="fmessage">Message</label>
+              <textarea id="fmessage" rows="5" placeholder="Tell me about your idea..." required></textarea>
+              <div class="input-highlight"></div>
+            </div>
+            <button type="submit" class="btn btn-primary full-width">
+              <i class="ri-send-plane-2-line"></i>
+              Send Message
+              <div class="btn-glow"></div>
+            </button>
+            <div class="form-success" id="form-success">
+              <i class="ri-checkbox-circle-line"></i>
+              Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="footer-glow"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">SH<span class="logo-dot">.</span></div>
+          <p class="footer-tagline">Designed to build intelligent digital experiences</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#journey">Journey</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/shahzaib1384" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="GitHub"><i class="ri-github-line"></i></a>
+          <a href="https://www.linkedin.com/in/shahzaibhaider2751/" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn"><i class="ri-linkedin-line"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Shahzaib Haider. All rights reserved.</span>
+        <span class="footer-built">Built with <span class="heart">♥</span> and JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
