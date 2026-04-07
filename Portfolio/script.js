@@ -308,25 +308,94 @@ document.querySelectorAll('.project-card').forEach(card => {
   });
 });
 
-/* ===== CONTACT FORM ===== */
+/* ===== CONTACT FORM → shahzaib1384@gmail.com (FormSubmit AJAX) ===== */
 document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
 
-  const btn     = this.querySelector('button[type="submit"]');
+  const form    = this;
+  const btn     = document.getElementById('contact-submit');
+  const label   = btn.querySelector('.btn-submit-label');
   const success = document.getElementById('form-success');
+  const errBox  = document.getElementById('form-error');
 
-  // Simulate sending
-  btn.innerHTML = '<i class="ri-loader-4-line"></i> Sending...';
-  btn.disabled  = true;
+  success.classList.remove('show');
+  errBox.classList.remove('show');
+  errBox.textContent = '';
 
-  setTimeout(() => {
-    btn.innerHTML = '<i class="ri-send-plane-2-line"></i> Send Message <div class="btn-glow"></div>';
-    btn.disabled  = false;
-    success.classList.add('show');
-    this.reset();
+  const name    = form.name.value.trim();
+  const email   = form.email.value.trim();
+  const subject = form.subject.value.trim();
+  const message = form.message.value.trim();
 
-    setTimeout(() => success.classList.remove('show'), 5000);
-  }, 1500);
+  if (!name || !email || !subject || !message) {
+    errBox.textContent = 'Please fill in all fields.';
+    errBox.classList.add('show');
+    return;
+  }
+
+  const honey = form.querySelector('input[name="_honey"]');
+  if (honey && honey.value) {
+    return;
+  }
+
+  const payload = {
+    name,
+    email,
+    subject,
+    message,
+    _subject: `[Portfolio] ${subject}`,
+    _replyto: email,
+    _template: 'table',
+  };
+
+  btn.disabled = true;
+  if (label) label.textContent = 'Sending…';
+  const icon = btn.querySelector('i');
+  if (icon) icon.className = 'ri-loader-4-line';
+
+  fetch(form.action, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then(function (res) {
+      return res.text().then(function (text) {
+        var data = {};
+        try {
+          data = text ? JSON.parse(text) : {};
+        } catch (e) {
+          if (!res.ok) throw new Error('Could not send the message. Please try again.');
+        }
+        if (!res.ok) {
+          throw new Error(data.message || data.error || 'Request failed');
+        }
+        if (data.success === false) {
+          throw new Error(data.message || 'Could not send the message.');
+        }
+        return data;
+      });
+    })
+    .then(function () {
+      success.classList.add('show');
+      form.reset();
+      setTimeout(function () {
+        success.classList.remove('show');
+      }, 8000);
+    })
+    .catch(function (err) {
+      errBox.textContent =
+        err.message ||
+        'Could not send right now. Email me at shahzaib1384@gmail.com or try again in a moment.';
+      errBox.classList.add('show');
+    })
+    .finally(function () {
+      btn.disabled = false;
+      if (label) label.textContent = 'Send Message';
+      if (icon) icon.className = 'ri-send-plane-2-line';
+    });
 });
 
 /* ===== SMOOTH SCROLL for anchor links ===== */

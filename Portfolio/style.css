@@ -1353,13 +1353,44 @@ a[href] { cursor: pointer; }
 /* Contact Form */
 .contact-form {
   padding: 2.5rem;
+  position: relative;
+}
+
+@keyframes formSpin {
+  to { transform: rotate(360deg); }
+}
+
+.contact-form .btn .ri-loader-4-line {
+  display: inline-block;
+  animation: formSpin 0.75s linear infinite;
 }
 
 .form-title {
   font-family: var(--font-display);
   font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.form-hint {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.form-hint strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.form-honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .form-row {
@@ -1422,6 +1453,22 @@ a[href] { cursor: pointer; }
 }
 
 .form-success.show { display: flex; }
+
+.form-error {
+  display: none;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: var(--radius-sm);
+  color: #fca5a5;
+  font-size: 0.88rem;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.form-error.show { display: flex; }
 
 /* ===== FOOTER ===== */
 #footer {

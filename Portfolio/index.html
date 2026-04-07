@@ -516,38 +516,41 @@
         </div>
 
         <div class="contact-form-wrap reveal-right">
-          <form class="contact-form glass-card" id="contact-form" novalidate>
+          <form class="contact-form glass-card" id="contact-form" action="https://formsubmit.co/ajax/shahzaib1384@gmail.com" method="POST" novalidate>
             <div class="form-title">Send a Message</div>
+            <p class="form-hint">Messages are delivered to <strong>shahzaib1384@gmail.com</strong>. I’ll reply from that address.</p>
             <div class="form-row">
               <div class="form-group">
                 <label for="fname">Your Name</label>
-                <input type="text" id="fname" placeholder="John Doe" required />
+                <input type="text" id="fname" name="name" autocomplete="name" placeholder="John Doe" required />
                 <div class="input-highlight"></div>
               </div>
               <div class="form-group">
                 <label for="femail">Your Email</label>
-                <input type="email" id="femail" placeholder="john@example.com" required />
+                <input type="email" id="femail" name="email" autocomplete="email" placeholder="john@example.com" required />
                 <div class="input-highlight"></div>
               </div>
             </div>
             <div class="form-group">
               <label for="fsubject">Subject</label>
-              <input type="text" id="fsubject" placeholder="Project collaboration..." required />
+              <input type="text" id="fsubject" name="subject" autocomplete="off" placeholder="Project collaboration..." required />
               <div class="input-highlight"></div>
             </div>
             <div class="form-group">
               <label for="fmessage">Message</label>
-              <textarea id="fmessage" rows="5" placeholder="Tell me about your idea..." required></textarea>
+              <textarea id="fmessage" name="message" rows="5" placeholder="Tell me about your idea..." required></textarea>
               <div class="input-highlight"></div>
             </div>
-            <button type="submit" class="btn btn-primary full-width">
+            <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <button type="submit" class="btn btn-primary full-width" id="contact-submit">
               <i class="ri-send-plane-2-line"></i>
-              Send Message
+              <span class="btn-submit-label">Send Message</span>
               <div class="btn-glow"></div>
             </button>
+            <div class="form-error" id="form-error" role="alert"></div>
             <div class="form-success" id="form-success">
               <i class="ri-checkbox-circle-line"></i>
-              Message sent! I'll get back to you soon.
+              Message sent! I’ll get back to you soon.
             </div>
           </form>
         </div>
